@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F1AF70628078CED00E0F64C /* CustomViews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F1AF70528078CED00E0F64C /* CustomViews.storyboard */; };
+		2F1AF70728078CED00E0F64C /* CustomViews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F1AF70528078CED00E0F64C /* CustomViews.storyboard */; };
+		2F1AF70828078CED00E0F64C /* CustomViews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F1AF70528078CED00E0F64C /* CustomViews.storyboard */; };
+		2F1AF70F28078DC100E0F64C /* CustomLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1AF70E28078DC100E0F64C /* CustomLoadingViewController.swift */; };
+		2F1AF71028078DC100E0F64C /* CustomLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1AF70E28078DC100E0F64C /* CustomLoadingViewController.swift */; };
+		2F1AF71128078DC100E0F64C /* CustomLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1AF70E28078DC100E0F64C /* CustomLoadingViewController.swift */; };
+		2F1AF714280790C500E0F64C /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1AF713280790C500E0F64C /* ColorPalette.swift */; };
+		2F1AF715280790C500E0F64C /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1AF713280790C500E0F64C /* ColorPalette.swift */; };
+		2F1AF716280790C500E0F64C /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1AF713280790C500E0F64C /* ColorPalette.swift */; };
 		2FB8602E28071C9A00A2AA69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8602D28071C9A00A2AA69 /* AppDelegate.swift */; };
 		2FB8603028071C9A00A2AA69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8602F28071C9A00A2AA69 /* SceneDelegate.swift */; };
 		2FB8603228071C9A00A2AA69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8603128071C9A00A2AA69 /* ViewController.swift */; };
@@ -57,6 +66,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F1AF70528078CED00E0F64C /* CustomViews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomViews.storyboard; sourceTree = "<group>"; };
+		2F1AF70E28078DC100E0F64C /* CustomLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoadingViewController.swift; sourceTree = "<group>"; };
+		2F1AF713280790C500E0F64C /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		2FB8602A28071C9A00A2AA69 /* Reddit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reddit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FB8602D28071C9A00A2AA69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FB8602F28071C9A00A2AA69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +136,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F1AF6FE28078C9300E0F64C /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				2F1AF7122807908800E0F64C /* Colors */,
+				2F1AF6FF28078C9B00E0F64C /* GenericViews */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		2F1AF6FF28078C9B00E0F64C /* GenericViews */ = {
+			isa = PBXGroup;
+			children = (
+				2F1AF70028078CA800E0F64C /* CustomLoading */,
+			);
+			path = GenericViews;
+			sourceTree = "<group>";
+		};
+		2F1AF70028078CA800E0F64C /* CustomLoading */ = {
+			isa = PBXGroup;
+			children = (
+				2F1AF70128078CB400E0F64C /* View */,
+			);
+			path = CustomLoading;
+			sourceTree = "<group>";
+		};
+		2F1AF70128078CB400E0F64C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F1AF70D28078DB700E0F64C /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2F1AF70428078CD900E0F64C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2F1AF70528078CED00E0F64C /* CustomViews.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2F1AF70D28078DB700E0F64C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2F1AF70E28078DC100E0F64C /* CustomLoadingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2F1AF7122807908800E0F64C /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				2F1AF713280790C500E0F64C /* ColorPalette.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
 		2FB8602128071C9A00A2AA69 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +218,8 @@
 		2FB8602C28071C9A00A2AA69 /* Reddit */ = {
 			isa = PBXGroup;
 			children = (
+				2F1AF70428078CD900E0F64C /* Views */,
+				2F1AF6FE28078C9300E0F64C /* Support */,
 				2FB860F0280746EF00A2AA69 /* Info */,
 				2FB8602D28071C9A00A2AA69 /* AppDelegate.swift */,
 				2FB8602F28071C9A00A2AA69 /* SceneDelegate.swift */,
@@ -348,6 +419,7 @@
 			files = (
 				2FB8603A28071C9B00A2AA69 /* LaunchScreen.storyboard in Resources */,
 				2FB8603728071C9B00A2AA69 /* Assets.xcassets in Resources */,
+				2F1AF70628078CED00E0F64C /* CustomViews.storyboard in Resources */,
 				2FB8603528071C9A00A2AA69 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,6 +444,7 @@
 			files = (
 				2FB861002807751900A2AA69 /* LaunchScreen.storyboard in Resources */,
 				2FB861012807751900A2AA69 /* Assets.xcassets in Resources */,
+				2F1AF70728078CED00E0F64C /* CustomViews.storyboard in Resources */,
 				2FB861022807751900A2AA69 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,6 +455,7 @@
 			files = (
 				2FB861172807752200A2AA69 /* LaunchScreen.storyboard in Resources */,
 				2FB861182807752200A2AA69 /* Assets.xcassets in Resources */,
+				2F1AF70828078CED00E0F64C /* CustomViews.storyboard in Resources */,
 				2FB861192807752200A2AA69 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,6 +467,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F1AF714280790C500E0F64C /* ColorPalette.swift in Sources */,
+				2F1AF70F28078DC100E0F64C /* CustomLoadingViewController.swift in Sources */,
 				2FB8603228071C9A00A2AA69 /* ViewController.swift in Sources */,
 				2FB8602E28071C9A00A2AA69 /* AppDelegate.swift in Sources */,
 				2FB8603028071C9A00A2AA69 /* SceneDelegate.swift in Sources */,
@@ -420,6 +496,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F1AF715280790C500E0F64C /* ColorPalette.swift in Sources */,
+				2F1AF71028078DC100E0F64C /* CustomLoadingViewController.swift in Sources */,
 				2FB860F82807751900A2AA69 /* ViewController.swift in Sources */,
 				2FB860F92807751900A2AA69 /* AppDelegate.swift in Sources */,
 				2FB860FA2807751900A2AA69 /* SceneDelegate.swift in Sources */,
@@ -430,6 +508,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F1AF716280790C500E0F64C /* ColorPalette.swift in Sources */,
+				2F1AF71128078DC100E0F64C /* CustomLoadingViewController.swift in Sources */,
 				2FB8610F2807752200A2AA69 /* ViewController.swift in Sources */,
 				2FB861102807752200A2AA69 /* AppDelegate.swift in Sources */,
 				2FB861112807752200A2AA69 /* SceneDelegate.swift in Sources */,
