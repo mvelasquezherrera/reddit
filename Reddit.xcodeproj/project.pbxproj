@@ -16,6 +16,9 @@
 		2FB8604528071C9B00A2AA69 /* RedditTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8604428071C9B00A2AA69 /* RedditTests.swift */; };
 		2FB8604F28071C9B00A2AA69 /* RedditUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8604E28071C9B00A2AA69 /* RedditUITests.swift */; };
 		2FB8605128071C9B00A2AA69 /* RedditUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8605028071C9B00A2AA69 /* RedditUITestsLaunchTests.swift */; };
+		2FB8608B280734D600A2AA69 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2FB8608A280734D600A2AA69 /* IQKeyboardManagerSwift */; };
+		2FB8608E280734EA00A2AA69 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2FB8608D280734EA00A2AA69 /* SDWebImage */; };
+		2FB86090280734EA00A2AA69 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2FB8608F280734EA00A2AA69 /* SDWebImageMapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FB8608E280734EA00A2AA69 /* SDWebImage in Frameworks */,
+				2FB86090280734EA00A2AA69 /* SDWebImageMapKit in Frameworks */,
+				2FB8608B280734D600A2AA69 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +149,11 @@
 			dependencies = (
 			);
 			name = Reddit;
+			packageProductDependencies = (
+				2FB8608A280734D600A2AA69 /* IQKeyboardManagerSwift */,
+				2FB8608D280734EA00A2AA69 /* SDWebImage */,
+				2FB8608F280734EA00A2AA69 /* SDWebImageMapKit */,
+			);
 			productName = Reddit;
 			productReference = 2FB8602A28071C9A00A2AA69 /* Reddit.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +226,10 @@
 				Base,
 			);
 			mainGroup = 2FB8602128071C9A00A2AA69;
+			packageReferences = (
+				2FB86089280734D600A2AA69 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				2FB8608C280734EA00A2AA69 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 2FB8602B28071C9A00A2AA69 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -602,6 +617,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2FB86089280734D600A2AA69 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		2FB8608C280734EA00A2AA69 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2FB8608A280734D600A2AA69 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FB86089280734D600A2AA69 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		2FB8608D280734EA00A2AA69 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FB8608C280734EA00A2AA69 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		2FB8608F280734EA00A2AA69 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FB8608C280734EA00A2AA69 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2FB8602228071C9A00A2AA69 /* Project object */;
 }
