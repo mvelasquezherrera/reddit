@@ -19,6 +19,24 @@
 		2FB8608B280734D600A2AA69 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2FB8608A280734D600A2AA69 /* IQKeyboardManagerSwift */; };
 		2FB8608E280734EA00A2AA69 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2FB8608D280734EA00A2AA69 /* SDWebImage */; };
 		2FB86090280734EA00A2AA69 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2FB8608F280734EA00A2AA69 /* SDWebImageMapKit */; };
+		2FB860F82807751900A2AA69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8603128071C9A00A2AA69 /* ViewController.swift */; };
+		2FB860F92807751900A2AA69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8602D28071C9A00A2AA69 /* AppDelegate.swift */; };
+		2FB860FA2807751900A2AA69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8602F28071C9A00A2AA69 /* SceneDelegate.swift */; };
+		2FB860FC2807751900A2AA69 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2FB860F42807751900A2AA69 /* SDWebImage */; };
+		2FB860FD2807751900A2AA69 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2FB860F62807751900A2AA69 /* SDWebImageMapKit */; };
+		2FB860FE2807751900A2AA69 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2FB860F22807751900A2AA69 /* IQKeyboardManagerSwift */; };
+		2FB861002807751900A2AA69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB8603828071C9B00A2AA69 /* LaunchScreen.storyboard */; };
+		2FB861012807751900A2AA69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FB8603628071C9B00A2AA69 /* Assets.xcassets */; };
+		2FB861022807751900A2AA69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB8603328071C9A00A2AA69 /* Main.storyboard */; };
+		2FB8610F2807752200A2AA69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8603128071C9A00A2AA69 /* ViewController.swift */; };
+		2FB861102807752200A2AA69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8602D28071C9A00A2AA69 /* AppDelegate.swift */; };
+		2FB861112807752200A2AA69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8602F28071C9A00A2AA69 /* SceneDelegate.swift */; };
+		2FB861132807752200A2AA69 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2FB8610B2807752200A2AA69 /* SDWebImage */; };
+		2FB861142807752200A2AA69 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2FB8610D2807752200A2AA69 /* SDWebImageMapKit */; };
+		2FB861152807752200A2AA69 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2FB861092807752200A2AA69 /* IQKeyboardManagerSwift */; };
+		2FB861172807752200A2AA69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB8603828071C9B00A2AA69 /* LaunchScreen.storyboard */; };
+		2FB861182807752200A2AA69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FB8603628071C9B00A2AA69 /* Assets.xcassets */; };
+		2FB861192807752200A2AA69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB8603328071C9A00A2AA69 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +70,10 @@
 		2FB8604A28071C9B00A2AA69 /* RedditUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedditUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FB8604E28071C9B00A2AA69 /* RedditUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditUITests.swift; sourceTree = "<group>"; };
 		2FB8605028071C9B00A2AA69 /* RedditUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2FB861062807751900A2AA69 /* Reddit UAT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reddit UAT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FB861072807751A00A2AA69 /* Info-UAT.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-UAT.plist"; path = "/Users/marcelostefanovelasquezherrera/Documents/Proyectos Xcode/ProyStefanini/Reddit/Reddit/Info/Info-UAT.plist"; sourceTree = "<absolute>"; };
+		2FB8611D2807752200A2AA69 /* Reddit DEV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reddit DEV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FB8611E2807752200A2AA69 /* Info-DEV.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-DEV.plist"; path = "/Users/marcelostefanovelasquezherrera/Documents/Proyectos Xcode/ProyStefanini/Reddit/Reddit/Info/Info-DEV.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +101,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2FB860FB2807751900A2AA69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FB860FC2807751900A2AA69 /* SDWebImage in Frameworks */,
+				2FB860FD2807751900A2AA69 /* SDWebImageMapKit in Frameworks */,
+				2FB860FE2807751900A2AA69 /* IQKeyboardManagerSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FB861122807752200A2AA69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FB861132807752200A2AA69 /* SDWebImage in Frameworks */,
+				2FB861142807752200A2AA69 /* SDWebImageMapKit in Frameworks */,
+				2FB861152807752200A2AA69 /* IQKeyboardManagerSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -98,6 +140,8 @@
 				2FB8602A28071C9A00A2AA69 /* Reddit.app */,
 				2FB8604028071C9B00A2AA69 /* RedditTests.xctest */,
 				2FB8604A28071C9B00A2AA69 /* RedditUITests.xctest */,
+				2FB861062807751900A2AA69 /* Reddit UAT.app */,
+				2FB8611D2807752200A2AA69 /* Reddit DEV.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,13 +149,13 @@
 		2FB8602C28071C9A00A2AA69 /* Reddit */ = {
 			isa = PBXGroup;
 			children = (
+				2FB860F0280746EF00A2AA69 /* Info */,
 				2FB8602D28071C9A00A2AA69 /* AppDelegate.swift */,
 				2FB8602F28071C9A00A2AA69 /* SceneDelegate.swift */,
 				2FB8603128071C9A00A2AA69 /* ViewController.swift */,
 				2FB8603328071C9A00A2AA69 /* Main.storyboard */,
 				2FB8603628071C9B00A2AA69 /* Assets.xcassets */,
 				2FB8603828071C9B00A2AA69 /* LaunchScreen.storyboard */,
-				2FB8603B28071C9B00A2AA69 /* Info.plist */,
 			);
 			path = Reddit;
 			sourceTree = "<group>";
@@ -131,6 +175,16 @@
 				2FB8605028071C9B00A2AA69 /* RedditUITestsLaunchTests.swift */,
 			);
 			path = RedditUITests;
+			sourceTree = "<group>";
+		};
+		2FB860F0280746EF00A2AA69 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				2FB8603B28071C9B00A2AA69 /* Info.plist */,
+				2FB861072807751A00A2AA69 /* Info-UAT.plist */,
+				2FB8611E2807752200A2AA69 /* Info-DEV.plist */,
+			);
+			path = Info;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +248,50 @@
 			productReference = 2FB8604A28071C9B00A2AA69 /* RedditUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		2FB860F12807751900A2AA69 /* Reddit UAT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FB861032807751900A2AA69 /* Build configuration list for PBXNativeTarget "Reddit UAT" */;
+			buildPhases = (
+				2FB860F72807751900A2AA69 /* Sources */,
+				2FB860FB2807751900A2AA69 /* Frameworks */,
+				2FB860FF2807751900A2AA69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Reddit UAT";
+			packageProductDependencies = (
+				2FB860F22807751900A2AA69 /* IQKeyboardManagerSwift */,
+				2FB860F42807751900A2AA69 /* SDWebImage */,
+				2FB860F62807751900A2AA69 /* SDWebImageMapKit */,
+			);
+			productName = Reddit;
+			productReference = 2FB861062807751900A2AA69 /* Reddit UAT.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2FB861082807752200A2AA69 /* Reddit DEV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FB8611A2807752200A2AA69 /* Build configuration list for PBXNativeTarget "Reddit DEV" */;
+			buildPhases = (
+				2FB8610E2807752200A2AA69 /* Sources */,
+				2FB861122807752200A2AA69 /* Frameworks */,
+				2FB861162807752200A2AA69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Reddit DEV";
+			packageProductDependencies = (
+				2FB861092807752200A2AA69 /* IQKeyboardManagerSwift */,
+				2FB8610B2807752200A2AA69 /* SDWebImage */,
+				2FB8610D2807752200A2AA69 /* SDWebImageMapKit */,
+			);
+			productName = Reddit;
+			productReference = 2FB8611D2807752200A2AA69 /* Reddit DEV.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -235,6 +333,8 @@
 			projectRoot = "";
 			targets = (
 				2FB8602928071C9A00A2AA69 /* Reddit */,
+				2FB860F12807751900A2AA69 /* Reddit UAT */,
+				2FB861082807752200A2AA69 /* Reddit DEV */,
 				2FB8603F28071C9B00A2AA69 /* RedditTests */,
 				2FB8604928071C9B00A2AA69 /* RedditUITests */,
 			);
@@ -266,6 +366,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2FB860FF2807751900A2AA69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FB861002807751900A2AA69 /* LaunchScreen.storyboard in Resources */,
+				2FB861012807751900A2AA69 /* Assets.xcassets in Resources */,
+				2FB861022807751900A2AA69 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FB861162807752200A2AA69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FB861172807752200A2AA69 /* LaunchScreen.storyboard in Resources */,
+				2FB861182807752200A2AA69 /* Assets.xcassets in Resources */,
+				2FB861192807752200A2AA69 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -293,6 +413,26 @@
 			files = (
 				2FB8605128071C9B00A2AA69 /* RedditUITestsLaunchTests.swift in Sources */,
 				2FB8604F28071C9B00A2AA69 /* RedditUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FB860F72807751900A2AA69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FB860F82807751900A2AA69 /* ViewController.swift in Sources */,
+				2FB860F92807751900A2AA69 /* AppDelegate.swift in Sources */,
+				2FB860FA2807751900A2AA69 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FB8610E2807752200A2AA69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FB8610F2807752200A2AA69 /* ViewController.swift in Sources */,
+				2FB861102807752200A2AA69 /* AppDelegate.swift in Sources */,
+				2FB861112807752200A2AA69 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,7 +594,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 22P58SR4VW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Reddit/Info.plist;
+				INFOPLIST_FILE = Reddit/Info/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -482,7 +622,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 22P58SR4VW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Reddit/Info.plist;
+				INFOPLIST_FILE = Reddit/Info/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -577,6 +717,118 @@
 			};
 			name = Release;
 		};
+		2FB861042807751900A2AA69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 22P58SR4VW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Reddit/Info/Info-UAT.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mvelasquezherrera.Reddit.uat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2FB861052807751900A2AA69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 22P58SR4VW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Reddit/Info/Info-UAT.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mvelasquezherrera.Reddit.uat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2FB8611B2807752200A2AA69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 22P58SR4VW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Reddit/Info/Info-DEV.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mvelasquezherrera.Reddit.dev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2FB8611C2807752200A2AA69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 22P58SR4VW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Reddit/Info/Info-DEV.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mvelasquezherrera.Reddit.dev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -616,6 +868,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		2FB861032807751900A2AA69 /* Build configuration list for PBXNativeTarget "Reddit UAT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FB861042807751900A2AA69 /* Debug */,
+				2FB861052807751900A2AA69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2FB8611A2807752200A2AA69 /* Build configuration list for PBXNativeTarget "Reddit DEV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FB8611B2807752200A2AA69 /* Debug */,
+				2FB8611C2807752200A2AA69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -628,6 +898,38 @@
 			};
 		};
 		2FB8608C280734EA00A2AA69 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		2FB860F32807751900A2AA69 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		2FB860F52807751900A2AA69 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		2FB8610A2807752200A2AA69 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		2FB8610C2807752200A2AA69 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
 			requirement = {
@@ -651,6 +953,36 @@
 		2FB8608F280734EA00A2AA69 /* SDWebImageMapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2FB8608C280734EA00A2AA69 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+		2FB860F22807751900A2AA69 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FB860F32807751900A2AA69 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		2FB860F42807751900A2AA69 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FB860F52807751900A2AA69 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		2FB860F62807751900A2AA69 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FB860F52807751900A2AA69 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+		2FB861092807752200A2AA69 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FB8610A2807752200A2AA69 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		2FB8610B2807752200A2AA69 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FB8610C2807752200A2AA69 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		2FB8610D2807752200A2AA69 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FB8610C2807752200A2AA69 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImageMapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
