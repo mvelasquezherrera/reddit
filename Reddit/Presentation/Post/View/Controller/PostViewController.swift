@@ -13,11 +13,18 @@ protocol PostViewControllerProtocol: class {
     func startLoadingAnimation()
     func finishLoadingAnimation()
     func endRefreshing()
+    func showEmptyView(show: Bool)
+    func cleanSearchText()
 }
 
 class PostViewController: BaseViewController {
 
     @IBOutlet weak var postTable: UITableView!
+    
+    @IBOutlet weak var emptyView: UIView!
+    @IBOutlet weak var imgEmptyView: UIImageView!
+    @IBOutlet weak var lblTitleEmptyView: UILabel!
+    @IBOutlet weak var lblDescriptionEmptyView: UILabel!
     
     private let startLoading = UINib(nibName: "CustomLoadingView", bundle: nil).instantiate(withOwner: self, options: nil).first as! CustomLoadingView
     
@@ -50,6 +57,7 @@ class PostViewController: BaseViewController {
     func configureUI() {
         view.backgroundColor = .white
         configurePostTableView()
+        configureEmptyView()
     }
     
 }
@@ -109,6 +117,31 @@ extension PostViewController {
         
     }
     
+    func configureEmptyView() {
+        
+        showEmptyView(show: false)
+        emptyView.backgroundColor = .white
+        
+        imgEmptyView.image = UIImage(named: "imgEmptyViewPost")
+        
+        lblTitleEmptyView.text = "No Results"
+        lblTitleEmptyView.font = UIFont(name: "HelveticaNeue-Regular", size: 20)
+        lblTitleEmptyView.textColor = ColorPalette.DesignSystem.titleColor
+        lblTitleEmptyView.numberOfLines = 0
+        lblTitleEmptyView.textAlignment = .center
+        
+        lblDescriptionEmptyView.text = "Sorry, there are no results for this search. Please try another phrase"
+        lblDescriptionEmptyView.font = UIFont(name: "HelveticaNeue-Regular", size: 15)
+        lblDescriptionEmptyView.textColor = ColorPalette.DesignSystem.descriptionColor
+        lblDescriptionEmptyView.numberOfLines = 0
+        lblDescriptionEmptyView.textAlignment = .center
+        
+    }
+    
+    func showEmptyView(show: Bool) {
+        emptyView.isHidden = !show
+    }
+    
     private func setConstraints(forView view: UIView, toView: UIView) {
         view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint(item: view, attribute: .top, relatedBy: .equal, toItem: toView, attribute: .top, multiplier: 1, constant: 0).isActive = true
@@ -153,6 +186,10 @@ extension PostViewController: PostViewControllerProtocol {
     
     func endRefreshing() {
         refreshControl.endRefreshing()
+    }
+    
+    func cleanSearchText() {
+        searchController.searchBar.text = ""
     }
     
 }

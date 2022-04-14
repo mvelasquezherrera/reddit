@@ -71,6 +71,7 @@ extension PostPresenter: PostPresenterProtocol {
                 self.listPost = dataPost.data?.children ?? [PostChildrenModel(kind: "", data: PostDataChildrenModel(url: "", title: "", score: 0, num_comments: 0))]
                 
                 view.reloadData()
+                view.showEmptyView(show: false)
                 print("Data Post SUCCESS PRESENTER: \(dataPost)")
                 
             case .failure(let error):
@@ -93,6 +94,14 @@ extension PostPresenter: PostPresenterProtocol {
 
                 self.dataPost = dataPost
                 self.listPost = dataPost.data?.children ?? [PostChildrenModel(kind: "", data: PostDataChildrenModel(url: "", title: "", score: 0, num_comments: 0))]
+                
+                let childrenData = dataPost.data?.children
+                
+                if childrenData?.count == 0 {
+                    view.showEmptyView(show: true)
+                } else {
+                    view.showEmptyView(show: false)
+                }
                 
                 view.reloadData()
                 print("Data Post Filtrado SUCCESS PRESENTER: \(dataPost)")
@@ -137,6 +146,7 @@ extension PostPresenter: PostPresenterProtocol {
             searchListPost.removeAll()
             searchListPost = listPost
             getListPost(isPull: false)
+            view?.showEmptyView(show: false)
             
         }
         
@@ -145,6 +155,8 @@ extension PostPresenter: PostPresenterProtocol {
     func actionSearchBarCancelButtonClicked() {
         searching = false
         searchListPost.removeAll()
+        view?.showEmptyView(show: false)
+        view?.cleanSearchText()
     }
     
 }
