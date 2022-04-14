@@ -20,51 +20,51 @@ public protocol AppSettingsInteractorProtocol {
     func setIntValue(value:Int, forKey key: String)
 }
 
-public class AppSettingsInteractor: Interactor , AppSettingsInteractorProtocol{
+public class AppSettingsInteractor: Interactor , AppSettingsInteractorProtocol {
         
     public func set(username: String) {
-        (self.repository as! RPStorageRepositoryProtocol).set(username: username)
+        (self.repository as! StorageRepositoryProtocol).set(username: username)
     }
     
     public func getUsername() -> String {
-        let username = (self.repository as! RPStorageRepositoryProtocol).getUsername()
+        let username = (self.repository as! StorageRepositoryProtocol).getUsername()
         return username
     }
     
     public func setIntValue(value: Int, forKey key: String) {
-        (self.repository as! RPStorageRepositoryProtocol).setIntValue(value: value, forKey: key)
+        (self.repository as! StorageRepositoryProtocol).setIntValue(value: value, forKey: key)
     }
     
     public func removeValue(forKey key: String) {
-      (self.repository as! RPStorageRepositoryProtocol).removeValue(forKey: key)
+      (self.repository as! StorageRepositoryProtocol).removeValue(forKey: key)
     }
     
     public func getValue(forKey key: String) -> String {
-        let keyString = (self.repository as!  RPStorageRepositoryProtocol).getValue(forKey: key)
+        let keyString = (self.repository as!  StorageRepositoryProtocol).getValue(forKey: key)
         return keyString
     }
     
     public func setValue(value: String, forKey key: String) {
         
-        (self.repository as! RPStorageRepositoryProtocol).setValue(value: value, key: key)
+        (self.repository as! StorageRepositoryProtocol).setValue(value: value, key: key)
     }
     
     public func set(user: User) {
         let userString = User.encode(user: user)
-        (self.repository as! RPStorageRepositoryProtocol).set(user: userString)
+        (self.repository as! StorageRepositoryProtocol).set(user: userString)
     }
     
     public func set(token: String) {
-        (self.repository as! RPStorageRepositoryProtocol).set(accessToken: token)
+        (self.repository as! StorageRepositoryProtocol).set(accessToken: token)
     }
     
     public func getUser() -> User? {
-        let userString = (self.repository as! RPStorageRepositoryProtocol).getUser()
+        let userString = (self.repository as! StorageRepositoryProtocol).getUser()
         return User.decode(jsonUser: userString)
     }
     
     public func getToken() -> String {
-        let token = (self.repository as! RPStorageRepositoryProtocol).getToken()
+        let token = (self.repository as! StorageRepositoryProtocol).getToken()
         return token
     }
 }

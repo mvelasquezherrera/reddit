@@ -13,6 +13,8 @@ struct ColorPalette {
         
         static let primaryColor = UIColor(named: "PrimaryColor")
         static let secondaryColor = UIColor(named: "SecondaryColor")
+        static let titleColor = UIColor(named: "titleColor")
+        static let descriptionColor = UIColor(named: "descriptionColor")
         
     }
     
