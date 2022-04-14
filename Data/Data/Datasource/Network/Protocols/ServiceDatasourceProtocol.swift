@@ -10,4 +10,5 @@ import Domain
 
 internal protocol ServiceDataSource {
     func getListPost(request: RequestObject, completion: @escaping (Result<PostEntity, Error>) -> Void)
+    func getFilterListPost(request: RequestObject, completion: @escaping (Result<PostEntity, Error>) -> Void)
 }

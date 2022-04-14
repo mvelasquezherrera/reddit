@@ -9,12 +9,24 @@ import Foundation
 
 public protocol PostInteractorProtocol {
     func getListPost(completion:@escaping (Result<PostModel, Error>) -> Void)
+    func getFilterListPost(searchText: String, completion:@escaping (Result<PostModel, Error>) -> Void)
 }
 
 public class PostInteractor: Interactor, PostInteractorProtocol {
     
     public func getListPost(completion:@escaping (Result<PostModel, Error>) -> Void) {
         return (self.repository as! UserRepositoryProtocol).getListPost { result in
+            switch result {
+            case .success(let data):
+                completion(.success(data))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    public func getFilterListPost(searchText: String, completion:@escaping (Result<PostModel, Error>) -> Void) {
+        return (self.repository as! UserRepositoryProtocol).getFilterListPost(searchText: searchText) { result in
             switch result {
             case .success(let data):
                 completion(.success(data))

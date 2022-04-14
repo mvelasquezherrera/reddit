@@ -24,3 +24,16 @@ internal struct ListPostRequestObject: RequestObject {
         headers = headerDefault
     }
 }
+
+internal struct FilterListPostRequestObject: RequestObject {
+    var path: String = "search.json?q="
+    var method: HTTPMethod = .get
+    var headers: HTTPHeaders
+    var encoding: JSONEncoding = .default
+    var parameters: Parameters = [:]
+
+    init(searchText: String) {
+        path.append("\(searchText)&limit=100")
+        headers = headerDefault
+    }
+}

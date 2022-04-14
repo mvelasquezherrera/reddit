@@ -33,4 +33,21 @@ public class UserRepository: UserRepositoryProtocol {
         
     }
     
+    public func getFilterListPost(searchText: String, completion: @escaping (Result<PostModel, Error>) -> Void) {
+        
+        self.dataSource.getFilterListPost(request: FilterListPostRequestObject(searchText: searchText)) { result in
+            switch result {
+            case .success(let data):
+                completion(.success(PostEntity.mapperPostEntity(entity: data)))
+            case .failure(let error):
+                if error is HttpError {
+                    completion(.failure(HttpError.get(error)))
+                } else {
+                    completion(.failure(ServiceError.get(error)))
+                }
+            }
+        }
+        
+    }
+    
 }

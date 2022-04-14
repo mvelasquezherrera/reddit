@@ -22,6 +22,7 @@ class PostViewController: BaseViewController {
     private let startLoading = UINib(nibName: "CustomLoadingView", bundle: nil).instantiate(withOwner: self, options: nil).first as! CustomLoadingView
     
     private let refreshControl = UIRefreshControl()
+    let searchController = UISearchController(searchResultsController: nil)
     
     var presenter: PostPresenterProtocol!
     var configurator = PostConfigurator()
@@ -35,11 +36,11 @@ class PostViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        setupNavigation()
     }
     
     override func viewWillAppear(_ animated:Bool) {
         super.viewWillAppear(animated)
-        setupNavigation()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -62,16 +63,8 @@ extension PostViewController {
     }
     
     func setupNavigation() {
-        self.navigationController?.navigationBar.backgroundColor = .clear
-        self.navigationController?.view.backgroundColor = .clear
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.view.backgroundColor = .clear
-        let back = UIBarButtonItem(image: UIImage(named: "back"), style: .plain, target: self, action: #selector(didTapBackButton))
-        self.navigationItem.setLeftBarButton(back, animated: false)
-        
+        title = "Posts"
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
     }
     
     func configurePostTableView() {
@@ -83,6 +76,7 @@ extension PostViewController {
         postTable.register(PostTableViewCell.nib(), forCellReuseIdentifier: PostTableViewCell.identifier)
         postTable.reloadData()
         configureRefreshControl()
+        configureSearchController()
     }
     
     func configureRefreshControl() {
@@ -93,6 +87,26 @@ extension PostViewController {
         }
         refreshControl.addTarget(self, action: #selector(refreshPost(_:)), for: .valueChanged)
 
+    }
+    
+    private func configureSearchController() {
+        searchController.loadViewIfNeeded()
+        if #available(iOS 13.0, *) {
+            searchController.searchBar.searchTextField.backgroundColor = .white
+        } else {
+            // Fallback on earlier versions
+        }
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.enablesReturnKeyAutomatically = false
+        searchController.searchBar.returnKeyType = UIReturnKeyType.done
+        self.navigationItem.searchController = searchController
+        self.navigationItem.hidesSearchBarWhenScrolling = true
+        definesPresentationContext = true
+        searchController.searchBar.placeholder = "Ingrese el título"
+        searchController.hidesNavigationBarDuringPresentation = false
+        
     }
     
     private func setConstraints(forView view: UIView, toView: UIView) {
@@ -195,6 +209,25 @@ extension PostViewController: CustomLoadingViewDelegate {
         startLoading.finishLoadingAnimation()
         endRefreshing()
         startLoading.removeFromSuperview()
+    }
+    
+}
+
+// MARK: - UISearchResultsUpdating, UISearchBarDelegate
+extension PostViewController: UISearchResultsUpdating, UISearchBarDelegate {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        
+        let searchText = searchController.searchBar.text!
+        
+        presenter.updateSearchResultsTable(searchText: searchText)
+        postTable.reloadData()
+        
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        presenter.actionSearchBarCancelButtonClicked()
+        postTable.reloadData()
     }
     
 }

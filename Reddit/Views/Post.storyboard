@@ -34,7 +34,7 @@
                             <constraint firstItem="fRK-hE-xuv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="tdB-wL-gfX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="TtX-QO-FGP"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="TtX-QO-FGP"/>
                     <connections>
                         <outlet property="postTable" destination="fRK-hE-xuv" id="l04-AV-Bi7"/>
                     </connections>

@@ -13,6 +13,8 @@ protocol PostPresenterProtocol {
     func getListPost(isPull: Bool)
     func getNumberOfRows() -> Int
     func getDataOfRows(row: Int) -> PostChildrenModel
+    func updateSearchResultsTable(searchText: String)
+    func actionSearchBarCancelButtonClicked()
 }
 
 class PostPresenter {
@@ -21,7 +23,11 @@ class PostPresenter {
     private var router: PostRouterProtocol
     private var viewData: ViewData?
     
-    var listPost = PostModel(kind: "", data: PostDataModel(after: "", dist: 0, modhash: "", geo_filter: "", children: [PostChildrenModel(kind: "", data: PostDataChildrenModel(url: "", title: "", score: 0, num_comments: 0))], before: ""))
+    var dataPost = PostModel(kind: "", data: PostDataModel(after: "", dist: 0, modhash: "", geo_filter: "", children: [PostChildrenModel(kind: "", data: PostDataChildrenModel(url: "", title: "", score: 0, num_comments: 0))], before: ""))
+    
+    private var listPost: [PostChildrenModel] = []
+    var searching = false
+    var searchListPost = [PostChildrenModel]()
     
     // Interactors
     private var interactorSettings: AppSettingsInteractorProtocol
@@ -56,15 +62,16 @@ extension PostPresenter: PostPresenterProtocol {
         interactorPost.getListPost { [weak self] (result) in
             self?.view?.finishLoadingAnimation()
             switch result {
-            case .success(let listadoPost):
+            case .success(let dataPost):
                 
                 guard let self = self else { return }
                 guard let view = self.view else { return }
 
-                self.listPost = listadoPost
+                self.dataPost = dataPost
+                self.listPost = dataPost.data?.children ?? [PostChildrenModel(kind: "", data: PostDataChildrenModel(url: "", title: "", score: 0, num_comments: 0))]
                 
                 view.reloadData()
-                print("Listado Post SUCCESS PRESENTER: \(listadoPost)")
+                print("Data Post SUCCESS PRESENTER: \(dataPost)")
                 
             case .failure(let error):
                 print("ERROR Listado Post: \(error)")
@@ -74,12 +81,70 @@ extension PostPresenter: PostPresenterProtocol {
         
     }
     
+    func getFilterListPost(searchText: String) {
+        
+        interactorPost.getFilterListPost(searchText: searchText) { [weak self] (result) in
+            self?.view?.finishLoadingAnimation()
+            switch result {
+            case .success(let dataPost):
+                
+                guard let self = self else { return }
+                guard let view = self.view else { return }
+
+                self.dataPost = dataPost
+                self.listPost = dataPost.data?.children ?? [PostChildrenModel(kind: "", data: PostDataChildrenModel(url: "", title: "", score: 0, num_comments: 0))]
+                
+                view.reloadData()
+                print("Data Post Filtrado SUCCESS PRESENTER: \(dataPost)")
+                
+            case .failure(let error):
+                print("ERROR Filtrado Listado Post: \(error)")
+            }
+            
+        }
+        
+    }
+    
     func getNumberOfRows() -> Int {
-        return listPost.data?.children?.count ?? 0
+        return dataPost.data?.children?.count ?? 0
     }
     
     func getDataOfRows(row: Int) -> PostChildrenModel {
-        return listPost.data?.children?[row] ?? PostChildrenModel(kind: "", data: PostDataChildrenModel(url: "", title: "", score: 0, num_comments: 0))
+        return dataPost.data?.children?[row] ?? PostChildrenModel(kind: "", data: PostDataChildrenModel(url: "", title: "", score: 0, num_comments: 0))
+    }
+    
+    func updateSearchResultsTable(searchText: String) {
+        
+        if !searchText.isEmpty {
+            searching = true
+            searchListPost.removeAll()
+            
+//            for item in listPost {
+//
+//                guard let titlePost = item.data?.title else { return }
+//
+//                if titlePost.lowercased().contains(searchText.lowercased()) {
+//                    searchListPost.append(item)
+//                }
+//
+//            }
+            
+            getFilterListPost(searchText: searchText)
+            
+        } else {
+            
+            searching = false
+            searchListPost.removeAll()
+            searchListPost = listPost
+            getListPost(isPull: false)
+            
+        }
+        
+    }
+    
+    func actionSearchBarCancelButtonClicked() {
+        searching = false
+        searchListPost.removeAll()
     }
     
 }
