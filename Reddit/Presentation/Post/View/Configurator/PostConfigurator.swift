@@ -17,7 +17,8 @@ class PostConfigurator: PostConfiguratorProtocol {
     
     func configure(viewController: PostViewController) {
         let router = PostRouter(withView: viewController)
-        viewController.presenter = PostPresenter(view: viewController, router: router, interactorSettings: AppSettingsInteractor(repository: StorageRepository()))
+        let interactorPost = PostInteractor(repository: UserRepository())
+        viewController.presenter = PostPresenter(view: viewController, router: router, interactorSettings: AppSettingsInteractor(repository: StorageRepository()), interactorPost: interactorPost)
     }
     
 }

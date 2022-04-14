@@ -10,11 +10,18 @@ import UIKit
 protocol PostViewControllerProtocol: class {
     func reloadData()
     func hideTableview(isHide: Bool)
+    func startLoadingAnimation()
+    func finishLoadingAnimation()
+    func endRefreshing()
 }
 
 class PostViewController: BaseViewController {
 
     @IBOutlet weak var postTable: UITableView!
+    
+    private let startLoading = UINib(nibName: "CustomLoadingView", bundle: nil).instantiate(withOwner: self, options: nil).first as! CustomLoadingView
+    
+    private let refreshControl = UIRefreshControl()
     
     var presenter: PostPresenterProtocol!
     var configurator = PostConfigurator()
@@ -23,6 +30,7 @@ class PostViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        presenter.viewDidLoad()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -32,7 +40,6 @@ class PostViewController: BaseViewController {
     override func viewWillAppear(_ animated:Bool) {
         super.viewWillAppear(animated)
         setupNavigation()
-        presenter.viewDidLoad()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -70,11 +77,22 @@ extension PostViewController {
     func configurePostTableView() {
         postTable.delegate = self
         postTable.dataSource = self
-        postTable.layoutIfNeeded()
         postTable.rowHeight = UITableView.automaticDimension
         postTable.separatorStyle = .none
         postTable.backgroundColor = .white
         postTable.register(PostTableViewCell.nib(), forCellReuseIdentifier: PostTableViewCell.identifier)
+        postTable.reloadData()
+        configureRefreshControl()
+    }
+    
+    func configureRefreshControl() {
+        if #available(iOS 10.0, *) {
+            postTable.refreshControl = refreshControl
+        } else {
+            postTable.addSubview(refreshControl)
+        }
+        refreshControl.addTarget(self, action: #selector(refreshPost(_:)), for: .valueChanged)
+
     }
     
     private func setConstraints(forView view: UIView, toView: UIView) {
@@ -92,6 +110,11 @@ extension PostViewController {
     
     @objc func didTapBackButton() {
         
+    }
+    
+    @objc private func refreshPost(_ sender: Any) {
+        // Fetch Weather Data
+        presenter.getListPost(isPull: true)
     }
     
 }
@@ -114,6 +137,10 @@ extension PostViewController: PostViewControllerProtocol {
         
     }
     
+    func endRefreshing() {
+        refreshControl.endRefreshing()
+    }
+    
 }
 
 // MARK: - UITableViewDataSource y UITableViewDelegate
@@ -124,20 +151,24 @@ extension PostViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return presenter.getNumberOfRows()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier, for: indexPath) as! PostTableViewCell
         
-        cell.urlImgPost = ""
-        cell.titlePost = ""
-        cell.nameImgArrowUp = ""
-        cell.scorePost = ""
-        cell.nameImgArrowDown = ""
-        cell.countCommentsPost = ""
-        cell.nameImgComment = ""
+        let data = presenter.getDataOfRows(row: indexPath.row).data
+        
+        cell.urlImgPost = data?.url ?? ""
+        cell.titlePost = data?.title ?? ""
+        cell.nameImgArrowUp = "imgArrowUp"
+        cell.scorePost = String(data?.score ?? 0)
+        cell.nameImgArrowDown = "imgArrowDown"
+        cell.countCommentsPost = String(data?.num_comments ?? 0)
+        cell.nameImgComment = "imgCountComments"
+        
+        cell.isUserInteractionEnabled = false
         
         return cell
         
@@ -149,3 +180,21 @@ extension PostViewController: UITableViewDataSource, UITableViewDelegate {
     
 }
 
+// MARK: - CustomLoadingViewDelegate
+extension PostViewController: CustomLoadingViewDelegate {
+    
+    func startLoadingAnimation() {
+        finishLoadingAnimation()
+        self.view.bringSubviewToFront(startLoading)
+        self.view.addSubview(startLoading)
+        setConstraints(forView: startLoading, toView: self.view)
+        startLoading.startLoadingAnimation()
+    }
+    
+    func finishLoadingAnimation() {
+        startLoading.finishLoadingAnimation()
+        endRefreshing()
+        startLoading.removeFromSuperview()
+    }
+    
+}

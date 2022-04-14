@@ -1,27 +1,27 @@
 //
-//  CustomLoadingViewController.swift
+//  CustomLoadingView.swift
 //  Reddit
 //
-//  Created by Marcelo Stefano Velasquez Herrera on 13/04/22.
+//  Created by Marcelo Stefano Velasquez Herrera on 14/04/22.
 //
 
 import UIKit
 
-protocol CustomLoadingViewControllerDelegate: class {
+protocol CustomLoadingViewDelegate: class {
     func startLoadingAnimation()
     func finishLoadingAnimation()
 }
 
-class CustomLoadingViewController: UIViewController {
+class CustomLoadingView: UIView {
     // MARK: - IBOutlets
     @IBOutlet weak var viewBackground: UIView!
     @IBOutlet weak var viewBackgroundLoading: UIView!
     @IBOutlet weak var loadingView: UIActivityIndicatorView!
     
     // MARK: - VARIABLES Y CONSTANTES
-    weak var delegate: CustomLoadingViewControllerDelegate?
+    weak var delegate: CustomLoadingViewDelegate?
     
-    override class func awakeFromNib() {
+    override func awakeFromNib() {
         super.awakeFromNib()
     }
     
@@ -37,7 +37,7 @@ class CustomLoadingViewController: UIViewController {
 }
 
 // MARK: - Set Style
-extension CustomLoadingViewController {
+extension CustomLoadingView {
     
     func setStyle() {
         setStyleViewBackground()

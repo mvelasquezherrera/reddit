@@ -33,8 +33,8 @@ public protocol Configuration {
 
 struct ProductionConfig: Configuration {
     
-    static let serverBaseUrl = ""
-    static let serverUrl = ""
+    static let serverBaseUrl = "https://www.reddit.com/r/chile/"
+    static let serverUrl = "https://www.reddit.com/r/chile/"
     static let apikey = ""
     static let key = ""
     static var pathGoogleService = ""
@@ -43,8 +43,8 @@ struct ProductionConfig: Configuration {
 
 struct UATConfig: Configuration {
     
-    static let serverBaseUrl = ""
-    static let serverUrl = ""
+    static let serverBaseUrl = "https://www.reddit.com/r/chile/"
+    static let serverUrl = "https://www.reddit.com/r/chile/"
     static let apikey = ""
     static let key = ""
     static var pathGoogleService = ""
@@ -53,8 +53,8 @@ struct UATConfig: Configuration {
 
 struct DevelopConfig: Configuration {
     
-    static let serverBaseUrl = ""
-    static let serverUrl = ""
+    static let serverBaseUrl = "https://www.reddit.com/r/chile/"
+    static let serverUrl = "https://www.reddit.com/r/chile/"
     static let apikey = ""
     static let key = ""
     static var pathGoogleService = ""

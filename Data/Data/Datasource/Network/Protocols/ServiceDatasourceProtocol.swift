@@ -9,5 +9,5 @@ import Foundation
 import Domain
 
 internal protocol ServiceDataSource {
-    
+    func getListPost(request: RequestObject, completion: @escaping (Result<PostEntity, Error>) -> Void)
 }
