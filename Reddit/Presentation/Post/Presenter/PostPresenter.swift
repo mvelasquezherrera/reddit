@@ -15,6 +15,7 @@ protocol PostPresenterProtocol {
     func getDataOfRows(row: Int) -> PostChildrenModel
     func updateSearchResultsTable(searchText: String)
     func actionSearchBarCancelButtonClicked()
+    func goToConfigurationPermission()
 }
 
 class PostPresenter {
@@ -157,6 +158,10 @@ extension PostPresenter: PostPresenterProtocol {
         searchListPost.removeAll()
         view?.showEmptyView(show: false)
         view?.cleanSearchText()
+    }
+    
+    func goToConfigurationPermission() {
+        router.routeToConfigurationPermission()
     }
     
 }

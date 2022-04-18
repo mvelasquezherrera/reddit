@@ -10,10 +10,12 @@ import UIKit
 protocol PostRouterProtocol {
     func routeToPrevious()
     func routeToPopup()
+    func routeToConfigurationPermission()
 }
 
 class PostRouter {
     
+    private let storyboardMain = UIStoryboard(name: "Main", bundle: nil)
     private let storyboardPost = UIStoryboard(name: "Post", bundle: nil)
     private let storyboardCustomViews = UIStoryboard(name: "CustomViews", bundle: nil)
     
@@ -33,6 +35,13 @@ extension PostRouter: PostRouterProtocol {
 
     func routeToPopup() {
         
+    }
+    
+    func routeToConfigurationPermission() {
+        guard let controller = storyboardMain.instantiateViewController(withIdentifier: "ConfigurationPermissionViewController") as? ConfigurationPermissionViewController, let view = self.currentViewController else { return }
+//        controller.modalPresentationStyle = .fullScreen
+//        view.navigationController?.pushViewController(controller, animated: true)
+        view.present(controller, animated: true)
     }
     
 }

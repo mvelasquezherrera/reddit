@@ -58,6 +58,27 @@
 		2F1AF76C2807FD4100E0F64C /* CustomLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F1AF76B2807FD4100E0F64C /* CustomLoadingView.xib */; };
 		2F1AF76D2807FD4100E0F64C /* CustomLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F1AF76B2807FD4100E0F64C /* CustomLoadingView.xib */; };
 		2F1AF76E2807FD4100E0F64C /* CustomLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F1AF76B2807FD4100E0F64C /* CustomLoadingView.xib */; };
+		2F874771280CA4510046617B /* ConfigurationPermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F874770280CA4510046617B /* ConfigurationPermissionViewController.swift */; };
+		2F874772280CA4510046617B /* ConfigurationPermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F874770280CA4510046617B /* ConfigurationPermissionViewController.swift */; };
+		2F874773280CA4510046617B /* ConfigurationPermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F874770280CA4510046617B /* ConfigurationPermissionViewController.swift */; };
+		2F874775280CA4600046617B /* ConfigurationPermissionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F874774280CA4600046617B /* ConfigurationPermissionRouter.swift */; };
+		2F874776280CA4600046617B /* ConfigurationPermissionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F874774280CA4600046617B /* ConfigurationPermissionRouter.swift */; };
+		2F874777280CA4600046617B /* ConfigurationPermissionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F874774280CA4600046617B /* ConfigurationPermissionRouter.swift */; };
+		2F874779280CA4680046617B /* ConfigurationPermissionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F874778280CA4680046617B /* ConfigurationPermissionPresenter.swift */; };
+		2F87477A280CA4680046617B /* ConfigurationPermissionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F874778280CA4680046617B /* ConfigurationPermissionPresenter.swift */; };
+		2F87477B280CA4680046617B /* ConfigurationPermissionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F874778280CA4680046617B /* ConfigurationPermissionPresenter.swift */; };
+		2F87477D280CA4710046617B /* ConfigurationPermissionConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F87477C280CA4710046617B /* ConfigurationPermissionConfigurator.swift */; };
+		2F87477E280CA4710046617B /* ConfigurationPermissionConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F87477C280CA4710046617B /* ConfigurationPermissionConfigurator.swift */; };
+		2F87477F280CA4710046617B /* ConfigurationPermissionConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F87477C280CA4710046617B /* ConfigurationPermissionConfigurator.swift */; };
+		2F874782280CA4C90046617B /* ConfigurationPermissionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F874780280CA4C90046617B /* ConfigurationPermissionCollectionViewCell.swift */; };
+		2F874783280CA4C90046617B /* ConfigurationPermissionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F874780280CA4C90046617B /* ConfigurationPermissionCollectionViewCell.swift */; };
+		2F874784280CA4C90046617B /* ConfigurationPermissionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F874780280CA4C90046617B /* ConfigurationPermissionCollectionViewCell.swift */; };
+		2F874785280CA4C90046617B /* ConfigurationPermissionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F874781280CA4C90046617B /* ConfigurationPermissionCollectionViewCell.xib */; };
+		2F874786280CA4C90046617B /* ConfigurationPermissionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F874781280CA4C90046617B /* ConfigurationPermissionCollectionViewCell.xib */; };
+		2F874787280CA4C90046617B /* ConfigurationPermissionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F874781280CA4C90046617B /* ConfigurationPermissionCollectionViewCell.xib */; };
+		2F87478A280CBB740046617B /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F874789280CBB740046617B /* RoundedCornerButton.swift */; };
+		2F87478B280CBB740046617B /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F874789280CBB740046617B /* RoundedCornerButton.swift */; };
+		2F87478C280CBB740046617B /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F874789280CBB740046617B /* RoundedCornerButton.swift */; };
 		2FB8602E28071C9A00A2AA69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8602D28071C9A00A2AA69 /* AppDelegate.swift */; };
 		2FB8603028071C9A00A2AA69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8602F28071C9A00A2AA69 /* SceneDelegate.swift */; };
 		2FB8603228071C9A00A2AA69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8603128071C9A00A2AA69 /* ViewController.swift */; };
@@ -166,6 +187,13 @@
 		2F1AF7552807E31900E0F64C /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		2F1AF7672807FCF400E0F64C /* CustomLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoadingView.swift; sourceTree = "<group>"; };
 		2F1AF76B2807FD4100E0F64C /* CustomLoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomLoadingView.xib; sourceTree = "<group>"; };
+		2F874770280CA4510046617B /* ConfigurationPermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationPermissionViewController.swift; sourceTree = "<group>"; };
+		2F874774280CA4600046617B /* ConfigurationPermissionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationPermissionRouter.swift; sourceTree = "<group>"; };
+		2F874778280CA4680046617B /* ConfigurationPermissionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationPermissionPresenter.swift; sourceTree = "<group>"; };
+		2F87477C280CA4710046617B /* ConfigurationPermissionConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationPermissionConfigurator.swift; sourceTree = "<group>"; };
+		2F874780280CA4C90046617B /* ConfigurationPermissionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationPermissionCollectionViewCell.swift; sourceTree = "<group>"; };
+		2F874781280CA4C90046617B /* ConfigurationPermissionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfigurationPermissionCollectionViewCell.xib; sourceTree = "<group>"; };
+		2F874789280CBB740046617B /* RoundedCornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerButton.swift; sourceTree = "<group>"; };
 		2FB8602A28071C9A00A2AA69 /* Reddit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reddit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FB8602D28071C9A00A2AA69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FB8602F28071C9A00A2AA69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -252,6 +280,7 @@
 		2F1AF6FF28078C9B00E0F64C /* GenericViews */ = {
 			isa = PBXGroup;
 			children = (
+				2F874788280CBB620046617B /* RoundedCornerButton */,
 				2F1AF72828079E6D00E0F64C /* BaseViewController */,
 				2F1AF70028078CA800E0F64C /* CustomLoading */,
 			);
@@ -295,6 +324,7 @@
 		2F1AF71C2807950000E0F64C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				2F874769280CA3FC0046617B /* ConfigurationPermission */,
 				2F1AF71D2807950600E0F64C /* Post */,
 			);
 			path = Presentation;
@@ -388,6 +418,75 @@
 				2F1AF74C2807B2C700E0F64C /* Protocols.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2F874769280CA3FC0046617B /* ConfigurationPermission */ = {
+			isa = PBXGroup;
+			children = (
+				2F87476C280CA41A0046617B /* Router */,
+				2F87476B280CA4160046617B /* Presenter */,
+				2F87476A280CA4130046617B /* View */,
+			);
+			path = ConfigurationPermission;
+			sourceTree = "<group>";
+		};
+		2F87476A280CA4130046617B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F87476F280CA4260046617B /* Cell */,
+				2F87476E280CA4230046617B /* Configurator */,
+				2F87476D280CA41E0046617B /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2F87476B280CA4160046617B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2F874778280CA4680046617B /* ConfigurationPermissionPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2F87476C280CA41A0046617B /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2F874774280CA4600046617B /* ConfigurationPermissionRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		2F87476D280CA41E0046617B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2F874770280CA4510046617B /* ConfigurationPermissionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2F87476E280CA4230046617B /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				2F87477C280CA4710046617B /* ConfigurationPermissionConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		2F87476F280CA4260046617B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2F874780280CA4C90046617B /* ConfigurationPermissionCollectionViewCell.swift */,
+				2F874781280CA4C90046617B /* ConfigurationPermissionCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2F874788280CBB620046617B /* RoundedCornerButton */ = {
+			isa = PBXGroup;
+			children = (
+				2F874789280CBB740046617B /* RoundedCornerButton.swift */,
+			);
+			path = RoundedCornerButton;
 			sourceTree = "<group>";
 		};
 		2FB8602128071C9A00A2AA69 = {
@@ -625,6 +724,7 @@
 				2F1AF70628078CED00E0F64C /* CustomViews.storyboard in Resources */,
 				2F1AF7592807E31900E0F64C /* PostTableViewCell.xib in Resources */,
 				2F1AF7192807944000E0F64C /* Post.storyboard in Resources */,
+				2F874785280CA4C90046617B /* ConfigurationPermissionCollectionViewCell.xib in Resources */,
 				2FB8603528071C9A00A2AA69 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -653,6 +753,7 @@
 				2F1AF70728078CED00E0F64C /* CustomViews.storyboard in Resources */,
 				2F1AF75A2807E31900E0F64C /* PostTableViewCell.xib in Resources */,
 				2F1AF71A2807944000E0F64C /* Post.storyboard in Resources */,
+				2F874786280CA4C90046617B /* ConfigurationPermissionCollectionViewCell.xib in Resources */,
 				2FB861022807751900A2AA69 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -667,6 +768,7 @@
 				2F1AF70828078CED00E0F64C /* CustomViews.storyboard in Resources */,
 				2F1AF75B2807E31900E0F64C /* PostTableViewCell.xib in Resources */,
 				2F1AF71B2807944000E0F64C /* Post.storyboard in Resources */,
+				2F874787280CA4C90046617B /* ConfigurationPermissionCollectionViewCell.xib in Resources */,
 				2FB861192807752200A2AA69 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -678,13 +780,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F874779280CA4680046617B /* ConfigurationPermissionPresenter.swift in Sources */,
 				2F1AF7252807952E00E0F64C /* PostViewController.swift in Sources */,
 				2F1AF714280790C500E0F64C /* ColorPalette.swift in Sources */,
 				2F1AF7322807B1F100E0F64C /* PostPresenter.swift in Sources */,
+				2F874771280CA4510046617B /* ConfigurationPermissionViewController.swift in Sources */,
+				2F874775280CA4600046617B /* ConfigurationPermissionRouter.swift in Sources */,
 				2F1AF72E2807B0D400E0F64C /* PostRouter.swift in Sources */,
 				2F1AF7512807B30800E0F64C /* PostConfigurator.swift in Sources */,
+				2F87477D280CA4710046617B /* ConfigurationPermissionConfigurator.swift in Sources */,
 				2F1AF74D2807B2C700E0F64C /* Protocols.swift in Sources */,
+				2F874782280CA4C90046617B /* ConfigurationPermissionCollectionViewCell.swift in Sources */,
 				2FB8603228071C9A00A2AA69 /* ViewController.swift in Sources */,
+				2F87478A280CBB740046617B /* RoundedCornerButton.swift in Sources */,
 				2FB8602E28071C9A00A2AA69 /* AppDelegate.swift in Sources */,
 				2F1AF72A28079E8100E0F64C /* BaseViewController.swift in Sources */,
 				2F1AF7682807FCF400E0F64C /* CustomLoadingView.swift in Sources */,
@@ -714,13 +822,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F87477A280CA4680046617B /* ConfigurationPermissionPresenter.swift in Sources */,
 				2F1AF7262807952E00E0F64C /* PostViewController.swift in Sources */,
 				2F1AF715280790C500E0F64C /* ColorPalette.swift in Sources */,
 				2F1AF7332807B1F100E0F64C /* PostPresenter.swift in Sources */,
+				2F874772280CA4510046617B /* ConfigurationPermissionViewController.swift in Sources */,
+				2F874776280CA4600046617B /* ConfigurationPermissionRouter.swift in Sources */,
 				2F1AF72F2807B0D400E0F64C /* PostRouter.swift in Sources */,
 				2F1AF7522807B30800E0F64C /* PostConfigurator.swift in Sources */,
+				2F87477E280CA4710046617B /* ConfigurationPermissionConfigurator.swift in Sources */,
 				2F1AF74E2807B2C700E0F64C /* Protocols.swift in Sources */,
+				2F874783280CA4C90046617B /* ConfigurationPermissionCollectionViewCell.swift in Sources */,
 				2FB860F82807751900A2AA69 /* ViewController.swift in Sources */,
+				2F87478B280CBB740046617B /* RoundedCornerButton.swift in Sources */,
 				2FB860F92807751900A2AA69 /* AppDelegate.swift in Sources */,
 				2F1AF72B28079E8100E0F64C /* BaseViewController.swift in Sources */,
 				2F1AF7692807FCF400E0F64C /* CustomLoadingView.swift in Sources */,
@@ -733,13 +847,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F87477B280CA4680046617B /* ConfigurationPermissionPresenter.swift in Sources */,
 				2F1AF7272807952E00E0F64C /* PostViewController.swift in Sources */,
 				2F1AF716280790C500E0F64C /* ColorPalette.swift in Sources */,
 				2F1AF7342807B1F100E0F64C /* PostPresenter.swift in Sources */,
+				2F874773280CA4510046617B /* ConfigurationPermissionViewController.swift in Sources */,
+				2F874777280CA4600046617B /* ConfigurationPermissionRouter.swift in Sources */,
 				2F1AF7302807B0D400E0F64C /* PostRouter.swift in Sources */,
 				2F1AF7532807B30800E0F64C /* PostConfigurator.swift in Sources */,
+				2F87477F280CA4710046617B /* ConfigurationPermissionConfigurator.swift in Sources */,
 				2F1AF74F2807B2C700E0F64C /* Protocols.swift in Sources */,
+				2F874784280CA4C90046617B /* ConfigurationPermissionCollectionViewCell.swift in Sources */,
 				2FB8610F2807752200A2AA69 /* ViewController.swift in Sources */,
+				2F87478C280CBB740046617B /* RoundedCornerButton.swift in Sources */,
 				2FB861102807752200A2AA69 /* AppDelegate.swift in Sources */,
 				2F1AF72C28079E8100E0F64C /* BaseViewController.swift in Sources */,
 				2F1AF76A2807FCF400E0F64C /* CustomLoadingView.swift in Sources */,

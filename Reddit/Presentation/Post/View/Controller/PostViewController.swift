@@ -73,6 +73,13 @@ extension PostViewController {
     func setupNavigation() {
         title = "Posts"
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        
+        let back = UIBarButtonItem(image: UIImage(named: "imgConfigurationPermission"), style: .plain, target: self, action: #selector(didTapConfigurationPermission))
+        self.navigationItem.setLeftBarButton(back, animated: false)
+        
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
     }
     
     func configurePostTableView() {
@@ -110,7 +117,7 @@ extension PostViewController {
         searchController.searchBar.enablesReturnKeyAutomatically = false
         searchController.searchBar.returnKeyType = UIReturnKeyType.done
         self.navigationItem.searchController = searchController
-        self.navigationItem.hidesSearchBarWhenScrolling = true
+        self.navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
         searchController.searchBar.placeholder = "Ingrese el título"
         searchController.hidesNavigationBarDuringPresentation = false
@@ -155,8 +162,8 @@ extension PostViewController {
 // MARK: - OBJC
 extension PostViewController {
     
-    @objc func didTapBackButton() {
-        
+    @objc func didTapConfigurationPermission() {
+        presenter.goToConfigurationPermission()
     }
     
     @objc private func refreshPost(_ sender: Any) {
