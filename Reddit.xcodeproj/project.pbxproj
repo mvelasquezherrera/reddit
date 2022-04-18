@@ -79,6 +79,7 @@
 		2F87478A280CBB740046617B /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F874789280CBB740046617B /* RoundedCornerButton.swift */; };
 		2F87478B280CBB740046617B /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F874789280CBB740046617B /* RoundedCornerButton.swift */; };
 		2F87478C280CBB740046617B /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F874789280CBB740046617B /* RoundedCornerButton.swift */; };
+		2F874794280CF0850046617B /* PostTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F874793280CF0850046617B /* PostTest.swift */; };
 		2FB8602E28071C9A00A2AA69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8602D28071C9A00A2AA69 /* AppDelegate.swift */; };
 		2FB8603028071C9A00A2AA69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8602F28071C9A00A2AA69 /* SceneDelegate.swift */; };
 		2FB8603228071C9A00A2AA69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8603128071C9A00A2AA69 /* ViewController.swift */; };
@@ -194,6 +195,7 @@
 		2F874780280CA4C90046617B /* ConfigurationPermissionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationPermissionCollectionViewCell.swift; sourceTree = "<group>"; };
 		2F874781280CA4C90046617B /* ConfigurationPermissionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfigurationPermissionCollectionViewCell.xib; sourceTree = "<group>"; };
 		2F874789280CBB740046617B /* RoundedCornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerButton.swift; sourceTree = "<group>"; };
+		2F874793280CF0850046617B /* PostTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTest.swift; sourceTree = "<group>"; };
 		2FB8602A28071C9A00A2AA69 /* Reddit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reddit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FB8602D28071C9A00A2AA69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FB8602F28071C9A00A2AA69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -489,6 +491,14 @@
 			path = RoundedCornerButton;
 			sourceTree = "<group>";
 		};
+		2F874792280CF0700046617B /* xctest */ = {
+			isa = PBXGroup;
+			children = (
+				2F874793280CF0850046617B /* PostTest.swift */,
+			);
+			path = xctest;
+			sourceTree = "<group>";
+		};
 		2FB8602128071C9A00A2AA69 = {
 			isa = PBXGroup;
 			children = (
@@ -532,6 +542,7 @@
 		2FB8604328071C9B00A2AA69 /* RedditTests */ = {
 			isa = PBXGroup;
 			children = (
+				2F874792280CF0700046617B /* xctest */,
 				2FB8604428071C9B00A2AA69 /* RedditTests.swift */,
 			);
 			path = RedditTests;
@@ -806,6 +817,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FB8604528071C9B00A2AA69 /* RedditTests.swift in Sources */,
+				2F874794280CF0850046617B /* PostTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
