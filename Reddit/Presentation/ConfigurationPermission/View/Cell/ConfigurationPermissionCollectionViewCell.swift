@@ -115,7 +115,6 @@ extension ConfigurationPermissionCollectionViewCell {
                     self.view?.cancelButtonAction()
                 }
 
-                
             } else {
                 
                 AVCaptureDevice.requestAccess(for: AVMediaType.video, completionHandler: { (granted :Bool) -> Void in
@@ -136,7 +135,21 @@ extension ConfigurationPermissionCollectionViewCell {
             }
             
         case 1:
-            break
+            
+            let center = UNUserNotificationCenter.current()
+            center.requestAuthorization(options: .alert) { status, error in
+                print("status: \(status)")
+                
+                DispatchQueue.main.async {
+                    self.presenter.showAlertPermissionNotifications { alertConfigure in
+                        self.presenter.openSettingsAppDevice()
+                    } actionContinue: { alertContinue in
+                        self.view?.cancelButtonAction()
+                    }
+                }
+                
+            }
+            
         case 2:
             
             locationManager = CLLocationManager()
